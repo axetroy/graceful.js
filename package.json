@@ -1,0 +1,21 @@
+{
+  "name": "@axetroy/graceful",
+  "version": "0.1.0",
+  "description": "Exist NodeJs process gracefully",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axetroy/graceful.js.git"
+  },
+  "author": "Axetroy",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/axetroy/graceful.js/issues"
+  },
+  "homepage": "https://github.com/axetroy/graceful.js#readme"
+}
