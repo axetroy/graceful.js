@@ -7,6 +7,11 @@ function log(message) {
   process.stdout.write(`[${process.pid}]: ${message}\n`);
 }
 
+function signalHandler(signal) {
+  log(`Received signal: ${signal}.`);
+  process.exit(128);
+}
+
 graceful.start = function() {
   log('start.');
 };
@@ -16,18 +21,13 @@ graceful.exist = function() {
     log(`Exit with code ${existCode}.`);
   });
 
-  process.on('SIGINT', s => {
-    log(`Received SIGINT ${s}.`);
-    process.exit(128);
-  });
+  process.on('SIGINT', signalHandler);
 
-  // windows-graceful-stop
-  process.on('message', function(msg) {
-    if (msg === 'shutdown') {
-      log(`Received message ${msg}.`);
-      process.exit(129);
-    }
-  });
+  // for windows signal
+  // when type <Ctrl>+<Break>
+  process.on('SIGBREAK', signalHandler);
+  // when close the terminal
+  process.on('SIGHUP', signalHandler);
 };
 
 module.export = graceful;
