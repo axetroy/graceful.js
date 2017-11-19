@@ -1,6 +1,6 @@
 function graceful() {
-  graceful().start();
-  graceful().exist();
+  graceful.start();
+  graceful.exist();
 }
 
 function log(message) {
@@ -30,5 +30,5 @@ graceful.exist = function() {
   process.on('SIGHUP', signalHandler);
 };
 
-module.export = graceful;
-module.export.default = graceful;
+module.exports = graceful;
+module.exports.default = graceful;
