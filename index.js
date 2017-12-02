@@ -1,3 +1,5 @@
+const kill = require('tree-kill');
+
 function graceful() {
   graceful.start();
   graceful.exist();
@@ -19,6 +21,7 @@ graceful.start = function() {
 graceful.exist = function() {
   process.on('exit', function(existCode) {
     log(`Exit with code ${existCode}.`);
+    kill(process.pid);
   });
 
   process.on('SIGINT', signalHandler);

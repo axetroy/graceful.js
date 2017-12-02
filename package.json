@@ -3,7 +3,9 @@
   "version": "0.1.1",
   "description": "Exist NodeJs process gracefully",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "tree-kill": "^1.2.0"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
