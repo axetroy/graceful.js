@@ -1,6 +1,6 @@
 {
   "name": "@axetroy/graceful",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Exist NodeJs process gracefully",
   "main": "index.js",
   "dependencies": {
