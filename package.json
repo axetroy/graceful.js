@@ -4,11 +4,14 @@
   "description": "Exist NodeJs process gracefully",
   "main": "index.js",
   "dependencies": {
-    "tree-kill": "^1.2.0"
+    "tree-kill": "^1.2.0",
+    "snyk": "^1.258.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/axetroy/graceful.js/issues"
   },
-  "homepage": "https://github.com/axetroy/graceful.js#readme"
+  "homepage": "https://github.com/axetroy/graceful.js#readme",
+  "snyk": true
 }
