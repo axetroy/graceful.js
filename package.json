@@ -4,7 +4,7 @@
   "description": "Exist NodeJs process gracefully",
   "main": "index.js",
   "dependencies": {
-    "tree-kill": "^1.2.0"
+    "tree-kill": "^1.2.2"
   },
   "devDependencies": {},
   "scripts": {
